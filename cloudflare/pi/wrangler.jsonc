@@ -1,0 +1,13 @@
+{
+ "$schema":"../node_modules/wrangler/config-schema.json",
+ "name":"morning-paper-pi",
+ "main":"../src/pi.ts",
+ "compatibility_date":"2026-10-18",
+ "compatibility_flags":["nodejs_compat"],
+ "workers_dev":false,
+ "preview_urls":false,
+ "services":[{"binding":"MODEL_GATEWAY","service":"morning-paper-credentials","entrypoint":"ModelGateway"}],
+ "durable_objects":{"bindings":[{"name":"PI_SESSIONS","class_name":"PiAgent"}]},
+ "migrations":[{"tag":"v1","new_sqlite_classes":["PiAgent"]}],
+ "observability":{"enabled":false}
+}

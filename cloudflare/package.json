@@ -1,0 +1,21 @@
+{
+  "name": "morning-paper-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../scripts/cloudflare.mjs dev",
+    "deploy:check": "node ../scripts/cloudflare.mjs check",
+    "deploy": "node ../scripts/cloudflare.mjs deploy",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "agents": "0.28.1",
+    "@earendil-works/pi-durable": "1.0.0",
+    "@earendil-works/pi-ai": "1.0.2"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0",
+    "@cloudflare/workers-types": "^4.0.0",
+    "typescript": "5.9.3"
+  }
+}
